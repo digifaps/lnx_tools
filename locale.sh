@@ -7,11 +7,16 @@ fi
 echo '::fixing locales ... '
 
 export LANGUAGE=en_US.UTF-8
+sleep 1
 export LANG=en_US.UTF-8
+sleep 1
 export LC_ALL=en_US.UTF-8
+sleep 1
 
 echo '::almost there ... '
 locale-gen en_US.UTF-8 && dpkg-reconfigure locales
+
+locale
 
 echo ':: done !'
 echo 'peace, love and Linux !'
